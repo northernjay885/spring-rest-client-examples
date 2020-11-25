@@ -1,10 +1,12 @@
 
 package guru.springframework.springrestclientexamples.domain;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Card {
+public class Card implements Serializable
+{
 
     private String type;
     private String number;
@@ -12,6 +14,7 @@ public class Card {
     private String iban;
     private String swift;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private final static long serialVersionUID = 6203456183354582742L;
 
     public String getType() {
         return type;
